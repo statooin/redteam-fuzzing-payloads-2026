@@ -17,6 +17,29 @@ The payloads in this repository are structured to target the most critical attac
 
 ## 📦 Asset Index
 
+The repository is structured into specialized directories, each targeting a specific vector of the modern attack surface:
+
+### 🌐 Web & Infrastructure (`/web_fuzzing/`)
+* `web_ext_common.txt`: A baseline, high-speed fuzzing list optimized for modern web server extensions, hidden directories, and exposed configuration files (e.g., `.env`, `.kube/config`). Used extensively with tools like `ffuf` and `feroxbuster`.
+
+### 🧠 AI Infrastructure & LLM Ops (`/ai_llm_fuzzing/`)
+* `prompt_injections.txt`: Modern LLM jailbreaks, system prompt extraction strings, and context window bypasses designed to test AI Gateway guardrails.
+* `rag_poisoning.txt`: Payloads crafted for Vector Database manipulation, semantic hijacking, and testing Retrieval-Augmented Generation architectures.
+
+### 🔌 API & Microservices (`/api_microservices/`)
+* `graphql_discovery.txt`: Dictionaries containing introspection queries, batching attack payloads, and common unauthorized mutation endpoints.
+* `grpc_endpoints.txt`: Reflection targets and internal microservice port definitions used to map out backend service meshes.
+
+### ☁️ Cloud Identity & Zero Trust (`/cloud_identity/`)
+* `jwt_bypasses.txt`: Payloads for testing API Gateways against algorithmic confusion (e.g., `alg: none`), signature stripping, and malformed claim structures.
+* `metadata_ssrf.txt`: High-value targets for Server-Side Request Forgery, focusing on AWS IMDSv2, GCP Metadata, Azure instance identities, and internal Kubernetes endpoints.
+
+### 🏗️ CI/CD & Supply Chain (`/cicd_supply_chain/`)
+* `exposed_configs.txt`: Paths aimed at detecting orphaned infrastructure state files (e.g., `terraform.tfstate`), pipeline definitions (`.gitlab-ci.yml`), and configuration leaks in staging environments.
+
+### 🛠️ Automation & Tooling (`/scripts/`)
+* `asm_fuzz_runner.py`: A production-grade, asynchronous Python fuzzer (using `aiohttp`). Designed for seamless integration into CI/CD pipelines to provide automated, continuous Attack Surface Management validation.
+
 
 ## 🛡️ The Defensive Perspective (SRE Context)
 "To build impenetrable systems, you must know how to break them." 
