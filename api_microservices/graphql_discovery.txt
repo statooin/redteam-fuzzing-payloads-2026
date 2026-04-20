@@ -1,0 +1,20 @@
+/graphql
+/v1/graphql
+/v2/graphql
+/graphiql
+/api/graphql
+/graphql/console
+/graphql.php
+/graphql/schema.json
+query { __schema { types { name } } }
+query { __schema { queryType { fields { name } } } }
+query IntrospectionQuery { __schema { types { name fields { name } } } }
+mutation { updateAdmin(id: 1) }
+mutation { deleteUser(id: 1) }
+query { getUser(id: "1' OR '1'='1") { name } }
+query { users { id username passwordHash } }
+query { admin { secret } }
+query a { __typename } query b { __typename }
+query { systemInfo { version env } }
+query { _service { sdl } }
+query { _debug { logs } }
