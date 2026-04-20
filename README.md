@@ -16,8 +16,7 @@ The payloads in this repository are structured to target the most critical attac
 * 🏗️ **CI/CD & Supply Chain:** Payloads aimed at identifying exposed `.git` directories, `.env` files, and vulnerable CI/CD pipeline configurations within staging environments.
 
 ## 📦 Asset Index
-* `web_ext_common.txt`: A baseline, high-speed fuzzing list optimized for modern web server extensions and common directory structures. Used extensively with tools like `ffuf` and `feroxbuster` for rapid endpoint discovery.
-* *(Further specialized dictionaries are added dynamically as new threat vectors emerge).*
+
 
 ## 🛡️ The Defensive Perspective (SRE Context)
 "To build impenetrable systems, you must know how to break them." 
